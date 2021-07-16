@@ -1,9 +1,14 @@
+import React, {useState} from "react";
 import illustrations from "./../assets/images/logoEsquenta.png";
 import logoImg from "./../assets/images/sale.png";
 import googleImg from "./../assets/images/google-icon.svg";
 
-
 export function Home(){
+    const [email, setEmail] = useState<any |null>(null);
+    const save = (key: string, value: string) => {
+        localStorage.setItem(key, value)
+    }
+
    return(
         <div id="page-auth">
             <aside>
@@ -25,8 +30,10 @@ export function Home(){
                     <form>
                         <input 
                         type="text"
-                        placeholder="Digite seu melhor e-mail" />
-                        <button className="promo-received" type="submit">Receber Promoções</button>
+                        placeholder="Digite seu melhor e-mail" 
+                        value={email} 
+                        onChange={(e) => setEmail(e.target.value)}/>
+                        <button onClick={() => save('ls_email',email )} className="promo-received" type="submit">Receber Promoções</button>
                     </form>
                 </div>
             </main>
