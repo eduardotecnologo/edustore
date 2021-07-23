@@ -1,9 +1,16 @@
 import React, {useState} from "react";
+import { useHistory } from 'react-router-dom';
 import illustrations from "./../assets/images/logoEsquenta.png";
 import logoImg from "./../assets/images/sale.png";
 import googleImg from "./../assets/images/google-icon.svg";
+import user from "./../assets/images/user.png";
 
 export function Home(){
+    const history = useHistory();
+    function navigateToStore(){
+        history.push('/store');
+    }
+
     const [email, setEmail] = useState<any |null>(null);
     const save = (key: string, value: string) => {
         localStorage.setItem(key, value)
@@ -19,6 +26,11 @@ export function Home(){
             </aside>
             <main>
                 <div className="main-content">
+                    <button className="create-acount" 
+                            onClick={navigateToStore}>
+                        <img src={user} alt="" style={{width:30}}/>
+                        Acesse aqui
+                    </button>
                     <img src={logoImg} alt="Logo Sales" />
                     <button className="create-acount">
                         <img src={googleImg} alt="Logo do google" />

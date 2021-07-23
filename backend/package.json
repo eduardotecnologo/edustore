@@ -1,0 +1,14 @@
+{
+  "name": "edustore",
+  "version": "1.0.0",
+  "description": "Loja para  curso GamaAcademy",
+  "main": "index.js",
+  "scripts":{
+    "start": "json-server --watch db.json --port 3001"
+  },
+  "author": "Eduardo Developet",
+  "license": "MIT",
+  "dependencies": {
+    "json-server": "0.13.0"
+  }
+}

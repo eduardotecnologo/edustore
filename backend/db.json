@@ -1,0 +1,23 @@
+{
+    "users" : [
+        {
+            "id": 1,
+            "name": "Eduardo Alexandre",
+            "email": "edua@edu.com"
+        },
+        {
+            "id": 2,
+            "name": "Lucio Silva",
+            "email": "lucio@edu.com"
+        }
+    ],
+    "products": [
+        {
+            "id": 1,
+        "description": "Computador",
+        "quantity" : 10,
+        "price": 300.00,
+        "model" :"Acer"
+        }
+    ]
+}
